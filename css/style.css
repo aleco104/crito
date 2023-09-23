@@ -10,6 +10,34 @@ html, body {
   color: #191919;
 }
 
+h2 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  color: #191919;
+}
+
+h3 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #191919;
+}
+
+h6 {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #F94D1C;
+}
+
+p {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #5E5E5E;
+}
+
 .btn-yellow {
   background-color: #F9D783;
   border: 1px solid #F9D783;
@@ -17,7 +45,10 @@ html, body {
   font-size: 16px;
   font-weight: 600;
   height: 56px;
-  padding: 18px 32px;
+  padding-right: 35px;
+  padding-left: 35px;
+  display: flex;
+  align-items: center;
   border-radius: 40px;
 }
 .btn-yellow i {
@@ -37,13 +68,39 @@ html, body {
   font-size: 16px;
   font-weight: 600;
   height: 56px;
-  padding: 18px 32px;
+  padding-right: 35px;
+  padding-left: 35px;
+  display: flex;
+  align-items: center;
   border-radius: 40px;
 }
 .btn-transparent i {
   margin-left: 12px;
 }
 .btn-transparent:hover {
+  background-color: #9b9b9b;
+  border-color: #9b9b9b;
+  color: #191919;
+  font-weight: 500;
+}
+
+.btn-black {
+  background-color: #191919;
+  border: 1px solid #191919;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+  height: 56px;
+  padding-right: 35px;
+  padding-left: 35px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+}
+.btn-black i {
+  margin-left: 12px;
+}
+.btn-black:hover {
   background-color: #9b9b9b;
   border-color: #9b9b9b;
   color: #191919;
@@ -164,16 +221,16 @@ header .container .bar a {
   }
 }
 
-.showcase {
+main .showcase {
   background-color: #F0EFE9;
   position: relative;
   z-index: 0;
 }
-.showcase .background-waves {
+main .showcase .background-waves {
   display: none;
 }
 @media (min-width: 768px) {
-  .showcase .background-waves {
+  main .showcase .background-waves {
     display: flex;
     position: absolute;
     bottom: 0;
@@ -181,77 +238,119 @@ header .container .bar a {
     z-index: -1;
   }
 }
-.showcase .container {
+main .showcase .container {
   display: flex;
   text-align: left;
   align-items: center;
 }
-.showcase .container .content {
+main .showcase .container .content {
   display: block;
   padding-bottom: 100px;
 }
-.showcase .container .content h1 {
+main .showcase .container .content h1 {
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
   font-size: 40px;
 }
 @media (min-width: 768px) {
-  .showcase .container .content h1 {
+  main .showcase .container .content h1 {
     font-weight: 700;
     font-size: 80px;
   }
 }
 @media (min-width: 1400px) {
-  .showcase .container .content h1 {
+  main .showcase .container .content h1 {
     font-weight: 700;
     font-size: 96px;
   }
 }
-.showcase .container .content p {
+main .showcase .container .content p {
   font-size: 20px;
   font-weight: 400;
-  font-size: 20px;
   color: #595957;
   padding-bottom: 46px;
   padding-top: 10px;
 }
-.showcase .container .content a {
+main .showcase .container .content a {
   text-decoration: none;
 }
-.showcase .container .content .btn-yellow {
+main .showcase .container .content .btn-yellow {
   margin-right: 0px;
   text-align: center;
 }
 @media (min-width: 426px) {
-  .showcase .container .content .btn-yellow {
+  main .showcase .container .content .btn-yellow {
     margin-right: 12px;
     text-align: left;
   }
 }
-.showcase .container .content .btn-transparent {
+main .showcase .container .content .btn-transparent {
   text-align: center;
 }
 @media (min-width: 426px) {
-  .showcase .container .content .btn-transparent {
+  main .showcase .container .content .btn-transparent {
     text-align: left;
   }
 }
-.showcase .container .content .buttons {
+main .showcase .container .content .buttons {
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 426px) {
-  .showcase .container .content .buttons {
+  main .showcase .container .content .buttons {
     display: flex;
     flex-direction: row;
   }
 }
-.showcase .container img {
+main .showcase .container img {
   display: none;
 }
 @media (min-width: 1200px) {
-  .showcase .container img {
+  main .showcase .container img {
     display: flex;
     margin-right: -53px;
   }
+}
+main .project-and-case {
+  margin-top: 124px;
+}
+main .project-and-case .container .project-titles {
+  display: block;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 108px;
+}
+main .project-and-case .container .project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 80px;
+}
+main .project-and-case .container .project-box h3 {
+  margin-top: 35px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #E7E7E7;
+}
+main .project-and-case .container .project-box a {
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #191919;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-top: 32px;
+}
+main .project-and-case .container .project-box i {
+  margin-left: 7px;
+}
+main .project-and-case .container .project-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 90px;
+}
+main .project-and-case .container .project-btn .btn-black {
+  text-decoration: none;
 }
