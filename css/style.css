@@ -229,7 +229,7 @@ main .showcase {
 main .showcase .background-waves {
   display: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   main .showcase .background-waves {
     display: flex;
     position: absolute;
@@ -311,26 +311,96 @@ main .showcase .container img {
     margin-right: -53px;
   }
 }
+main .customers {
+  margin-top: 98px;
+  margin-bottom: 110px;
+}
+main .customers .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+@media (min-width: 1400px) {
+  main .customers .container {
+    padding-right: 48px;
+    padding-left: 48px;
+  }
+}
+main .customers .container img {
+  width: 60px;
+}
+@media (min-width: 768px) {
+  main .customers .container img {
+    width: 100px;
+  }
+}
+@media (min-width: 992px) {
+  main .customers .container img {
+    width: auto;
+  }
+}
 main .project-and-case {
   margin-top: 124px;
+}
+main .project-and-case .container {
+  padding: 0;
 }
 main .project-and-case .container .project-titles {
   display: block;
   text-align: center;
   justify-content: center;
   align-items: center;
-  margin-bottom: 108px;
+  margin-bottom: 55px;
+}
+@media (min-width: 768px) {
+  main .project-and-case .container .project-titles {
+    margin-bottom: 98px;
+  }
 }
 main .project-and-case .container .project-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  grid-template-columns: 1fr;
+  gap: 28px;
   margin-bottom: 80px;
 }
+@media (min-width: 576px) {
+  main .project-and-case .container .project-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+main .project-and-case .container .project-box .image-box {
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 576px) {
+  main .project-and-case .container .project-box .image-box {
+    display: block;
+  }
+}
+main .project-and-case .container .project-box img {
+  width: 90vw;
+}
+@media (min-width: 576px) {
+  main .project-and-case .container .project-box img {
+    width: 40vw;
+  }
+}
+@media (min-width: 1400px) {
+  main .project-and-case .container .project-box img {
+    width: auto;
+  }
+}
 main .project-and-case .container .project-box h3 {
+  margin-left: 40px;
   margin-top: 35px;
   padding-bottom: 17px;
   border-bottom: 1px solid #E7E7E7;
+}
+@media (min-width: 576px) {
+  main .project-and-case .container .project-box h3 {
+    display: block;
+    margin-left: 0px;
+  }
 }
 main .project-and-case .container .project-box a {
   font-size: 14px;
