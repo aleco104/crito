@@ -339,8 +339,106 @@ main .customers .container img {
     width: auto;
   }
 }
+main .features {
+  margin-top: 185px;
+}
+main .features .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  position: relative;
+  column-gap: 20px;
+  row-gap: 60px;
+}
+@media (min-width: 768px) {
+  main .features .container {
+    grid-template-columns: 30% 1fr;
+  }
+}
+@media (min-width: 992px) {
+  main .features .container {
+    grid-template-columns: 40% 1fr;
+  }
+}
+@media (min-width: 1200px) {
+  main .features .container {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+main .features .container .features-border {
+  position: absolute;
+  border: 1px solid #d1d1d1;
+  display: none;
+}
+@media (min-width: 1530px) {
+  main .features .container .features-border {
+    display: block;
+    top: -84px;
+    bottom: -153px;
+    left: -95px;
+    right: -100px;
+  }
+}
+main .features .container .section-left h6 {
+  margin-bottom: 20px;
+}
+main .features .container .section-left h2 {
+  margin-bottom: 46px;
+  font-size: 32px;
+}
+@media (min-width: 768px) {
+  main .features .container .section-left h2 {
+    font-size: 37px;
+  }
+}
+@media (min-width: 992px) {
+  main .features .container .section-left h2 {
+    font-size: 45px;
+  }
+}
+main .features .container .section-left a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .features .container .section-left .features-left-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  main .features .container .section-left .features-left-btn {
+    display: block;
+  }
+}
+main .features .container .section-left .features-left-btn btn-yellow {
+  text-align: center;
+}
+main .features .container .section-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 0;
+  gap: 30px;
+}
+@media (min-width: 768px) {
+  main .features .container .section-right {
+    margin-left: 120px;
+  }
+}
+main .features .container .section-right .features-box {
+  width: 200px;
+}
+@media (min-width: 1200px) {
+  main .features .container .section-right .features-box {
+    width: 300px;
+  }
+}
+main .features .container .section-right .features-box h3 {
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
 main .project-and-case {
-  margin-top: 124px;
+  margin-top: 200px;
 }
 main .project-and-case .container {
   padding: 0;

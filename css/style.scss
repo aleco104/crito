@@ -1,6 +1,6 @@
 * {
     box-sizing:border-box;  
-    //border:solid 1px;  
+    // border:solid 1px;  
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap');
@@ -370,8 +370,111 @@ main {
         }
     }
 
+    .features {
+        margin-top: 185px;
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            position: relative;
+            column-gap: 20px;
+            row-gap: 60px;          
+
+            @media (min-width: 768px) {
+                grid-template-columns: 30% 1fr;           
+            }
+
+            @media (min-width: 992px) {
+                grid-template-columns: 40% 1fr;           
+            }
+
+            @media (min-width: 1200px) {
+                grid-template-columns: 1fr 2fr;
+            }
+
+            .features-border {
+                position: absolute;
+                border: 1px solid #d1d1d1;
+                display: none;
+
+                @media (min-width: 1530px) {
+                    display: block;
+                    top: -84px;
+                    bottom: -153px;
+                    left: -95px;
+                    right: -100px;          
+                }
+            }
+
+            .section-left {
+
+                h6 {
+                    margin-bottom: 20px;
+                }
+
+                h2 {
+                    margin-bottom: 46px;
+                    font-size: 32px;
+
+                    @media (min-width: 768px) {
+                        font-size: 37px;                        
+                    }
+
+                    @media (min-width: 992px) {
+                        font-size: 45px;                        
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .features-left-btn {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    @media (min-width: 768px) {
+                        display: block;
+                    }
+
+                    btn-yellow {
+                        text-align: center;
+                    }
+                }
+            }
+
+            .section-right {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                margin-left: 0;
+                gap: 30px;
+
+                @media (min-width: 768px) {
+                    margin-left: 120px;        
+                }
+
+                .features-box {
+                    width: 200px;
+
+                    @media (min-width: 1200px) {
+                        width: 300px;
+                    }
+
+                    h3 {
+                        margin-top: 22px;
+                        margin-bottom: 22px;
+                    }
+                }
+            }
+        }
+    }
+
     .project-and-case {
-        margin-top: 124px;
+        margin-top: 200px; //124px enl crito
 
         .container {
             padding: 0;
