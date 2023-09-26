@@ -473,6 +473,101 @@ main {
         }
     }
 
+    .our-services {
+        margin-top: 250px;
+        background-color: #F0EFE9;
+        padding-top: 120px;
+        padding-bottom: 120px;
+
+        .container {
+            padding: 0;
+            
+            .services-titles {
+
+                h2 {
+                    margin-top: 20px;
+                    margin-bottom: 55px;
+                    width: 573px;
+                }
+            }
+
+            .services-bottom {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: 30px;
+
+                .services-box {
+                    background-color: white;
+                    padding: 47px 30px;
+
+                    .box-line {
+                        margin-bottom: 42px;
+                        border-bottom: 2px solid #191919;
+                        width: 39px;
+                    }
+
+                    p {
+                        line-height: 28px;
+                    }
+
+                    .box-arrow {
+                        display: flex;
+                        justify-content: end;
+                        align-items: center;
+
+                        a {
+                                background-color: #191919;
+                                border: 1px solid #191919;
+                                font-size: 18px;
+                                height: 56px;
+                                width: 56px;
+                                border-radius: 40px;
+                                text-decoration: none;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                        }
+                                
+                        i {
+                            color: white;
+                            font-weight: 300;
+                        }
+                    }
+                }
+
+                .services-box-yellow {
+                    background-color: #F9D783;
+
+                    
+                    .box-arrow {
+                        a {
+                            background-color: #FFFFFF;
+                            border: 1px solid #ffffff;
+                        }
+
+                        i {
+                            color: #191919;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+
+            .services-btn {
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 48px;
+
+                    a {
+                        text-decoration: none;
+                    }
+                
+            }
+        }
+    }
+
     .project-and-case {
         margin-top: 200px; //124px enl crito
 
