@@ -55,10 +55,10 @@ p {
   margin-left: 12px;
 }
 .btn-yellow:hover {
-  background-color: #9b9b9b;
-  border-color: #9b9b9b;
-  color: #191919;
   font-weight: 500;
+  background-color: #191919;
+  border: 1px solid #191919;
+  color: white;
 }
 
 .btn-transparent {
@@ -368,6 +368,7 @@ main .features .container .features-border {
   position: absolute;
   border: 1px solid #d1d1d1;
   display: none;
+  z-index: -1;
 }
 @media (min-width: 1530px) {
   main .features .container .features-border {
@@ -395,12 +396,6 @@ main .features .container .section-left h2 {
     font-size: 45px;
   }
 }
-main .features .container .section-left a {
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 main .features .container .section-left .features-left-btn {
   display: flex;
   justify-content: center;
@@ -411,14 +406,25 @@ main .features .container .section-left .features-left-btn {
     display: block;
   }
 }
-main .features .container .section-left .features-left-btn btn-yellow {
+main .features .container .section-left .features-left-btn a {
   text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 main .features .container .section-right {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-left: 0;
   gap: 30px;
+}
+@media (min-width: 450px) {
+  main .features .container .section-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media (min-width: 768px) {
   main .features .container .section-right {
@@ -443,18 +449,29 @@ main .our-services {
   padding-top: 120px;
   padding-bottom: 120px;
 }
-main .our-services .container {
-  padding: 0;
+@media (min-width: 576px) {
+  main .our-services .container {
+    padding: 0;
+  }
 }
 main .our-services .container .services-titles h2 {
   margin-top: 20px;
   margin-bottom: 55px;
-  width: 573px;
 }
 main .our-services .container .services-bottom {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 30px;
+}
+@media (min-width: 576px) {
+  main .our-services .container .services-bottom {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 992px) {
+  main .our-services .container .services-bottom {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 main .our-services .container .services-bottom .services-box {
   background-color: white;
@@ -484,6 +501,10 @@ main .our-services .container .services-bottom .services-box .box-arrow a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+main .our-services .container .services-bottom .services-box .box-arrow a:hover {
+  background-color: #A4A4A4;
+  border: 1px solid #A4A4A4;
 }
 main .our-services .container .services-bottom .services-box .box-arrow i {
   color: white;
@@ -526,6 +547,9 @@ main .project-and-case .container .project-titles {
   main .project-and-case .container .project-titles {
     margin-bottom: 98px;
   }
+}
+main .project-and-case .container .project-titles h6 {
+  margin-bottom: 27px;
 }
 main .project-and-case .container .project-grid {
   display: grid;
@@ -572,17 +596,22 @@ main .project-and-case .container .project-box h3 {
     margin-left: 0px;
   }
 }
-main .project-and-case .container .project-box a {
+main .project-and-case .container .project-box .box-btn {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+main .project-and-case .container .project-box .box-btn a {
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
   color: #191919;
-  display: flex;
-  justify-content: end;
-  align-items: center;
   margin-top: 32px;
 }
-main .project-and-case .container .project-box i {
+main .project-and-case .container .project-box .box-btn a:hover {
+  font-weight: 700;
+}
+main .project-and-case .container .project-box .box-btn i {
   margin-left: 7px;
 }
 main .project-and-case .container .project-btn {
