@@ -530,6 +530,55 @@ main .our-services .container .services-btn {
 main .our-services .container .services-btn a {
   text-decoration: none;
 }
+main .choose-us-section {
+  padding: 65px;
+  position: relative;
+  z-index: 0;
+}
+main .choose-us-section .container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "titles img" "boxes img";
+}
+main .choose-us-section .container .choose-us-titles {
+  margin-bottom: 44px;
+  grid-area: titles;
+}
+main .choose-us-section .container .choose-us-titles h6 {
+  margin-bottom: 34px;
+}
+main .choose-us-section .container .choose-us-boxes {
+  grid-area: boxes;
+}
+main .choose-us-section .container .choose-us-boxes .choose-us-box {
+  margin-bottom: 39px;
+  display: grid;
+  grid-template-columns: min-content;
+  grid-template-areas: "img h3" "img p";
+}
+main .choose-us-section .container .choose-us-boxes .choose-us-box img {
+  grid-area: img;
+  margin-right: 22px;
+}
+main .choose-us-section .container .choose-us-boxes .choose-us-box h3 {
+  grid-area: h3;
+}
+main .choose-us-section .container .choose-us-boxes .choose-us-box p {
+  grid-area: p;
+}
+main .choose-us-section .container .choose-us-img {
+  grid-area: img;
+  margin-top: 36px;
+}
+main .choose-us-section .choose-us-rectangle {
+  background-color: #F0EFE9;
+  height: 425px;
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  left: calc(50% - 112px);
+  top: 267px;
+}
 main .project-and-case {
   margin-top: 200px;
 }
