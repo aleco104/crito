@@ -443,6 +443,93 @@ main .features .container .section-right .features-box h3 {
   margin-top: 22px;
   margin-bottom: 22px;
 }
+main .about-company {
+  margin-top: 250px;
+}
+main .about-company .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 160px;
+}
+main .about-company .container .about-company-left {
+  position: relative;
+  z-index: 0;
+}
+main .about-company .container .about-company-left .left-blue-rectangle {
+  padding: 30px 20px;
+  width: 368px;
+  height: 180px;
+  background-color: #BEEBFF;
+  position: absolute;
+  z-index: 1;
+  bottom: 40px;
+  left: -56px;
+}
+main .about-company .container .about-company-left .left-blue-rectangle .blue-rectangle-titles {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+main .about-company .container .about-company-left .left-blue-rectangle h3 {
+  margin-right: 5px;
+}
+main .about-company .container .about-company-left .left-blue-rectangle p {
+  font-style: italic;
+  font-weight: 500;
+}
+main .about-company .container .about-company-left .fidelidutt {
+  position: absolute;
+  z-index: 1;
+  left: -35px;
+  top: 35px;
+}
+main .about-company .container .about-company-right .company-right-top {
+  margin-bottom: 60px;
+}
+main .about-company .container .about-company-right .company-right-top h6 {
+  margin-bottom: 30px;
+}
+main .about-company .container .about-company-right .company-right-top h2 {
+  margin-bottom: 35px;
+}
+main .about-company .container .about-company-right .company-right-top p {
+  line-height: 32px;
+}
+main .about-company .container .about-company-right .company-right-bottom {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+main .about-company .container .about-company-right .company-right-bottom a {
+  text-decoration: none;
+}
+main .about-company .container .about-company-right .company-right-bottom a span {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #191919;
+}
+main .about-company .container .about-company-right .company-right-bottom .btn-black {
+  margin-right: 39px;
+}
+main .about-company .container .about-company-right .company-right-bottom .video-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .about-company .container .about-company-right .company-right-bottom .video-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #191919;
+  border-radius: 25px;
+  height: 48px;
+  width: 48px;
+  margin-right: 17px;
+}
+main .about-company .container .about-company-right .company-right-bottom .video-btn i {
+  color: #191919;
+}
 main .our-services {
   margin-top: 250px;
   background-color: #F0EFE9;
@@ -631,9 +718,6 @@ main .choose-us-section .choose-us-rectangle {
     left: calc(50% - 112px);
     display: block;
   }
-}
-main .project-and-case {
-  margin-top: 200px;
 }
 main .project-and-case .container {
   padding: 0;

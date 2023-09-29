@@ -480,6 +480,115 @@ main {
         }
     }
 
+    .about-company {
+        margin-top: 250px;
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 160px;
+
+            .about-company-left {
+                position: relative;
+                z-index: 0;
+
+                .left-blue-rectangle {
+                    padding: 30px 20px;
+                    width: 368px;
+                    height: 180px;
+                    background-color: #BEEBFF;
+                    position: absolute;
+                    z-index: 1;
+                    bottom: 40px;
+                    left: -56px;
+
+                    .blue-rectangle-titles {
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                    }
+
+                    h3 {
+                        margin-right: 5px;
+                    }
+
+                    p {
+                        font-style: italic;
+                        font-weight: 500;
+                    }
+                }
+
+                .fidelidutt {
+                    position: absolute;
+                    z-index: 1;
+                    left: -35px;
+                    top: 35px;
+                }
+            }
+
+            .about-company-right {
+
+                .company-right-top {
+                    margin-bottom: 60px;
+
+                    h6 {
+                        margin-bottom: 30px;
+                    }
+
+                    h2 {
+                        margin-bottom: 35px;
+                    }
+
+                    p {
+                        line-height: 32px;
+                    }
+                }
+
+                .company-right-bottom {
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+
+                    a {
+                        text-decoration: none;
+                          
+                        span {
+                            font-family: 'Inter', sans-serif;
+                            font-size: 16px;
+                            font-weight: 600;
+                            color: #191919;
+                        }
+                    }
+
+                    .btn-black {
+                        margin-right: 39px;
+                    }
+
+                    .video-link {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .video-btn {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: 1px solid #191919;
+                        border-radius: 25px;
+                        height: 48px;
+                        width: 48px;
+                        margin-right: 17px;
+
+                        i {
+                            color: #191919;
+                        }
+                    }
+                }
+            }   
+        }
+    }
+
     .our-services {
         margin-top: 250px;
         background-color: #F0EFE9;
@@ -585,7 +694,6 @@ main {
                     a {
                         text-decoration: none;
                     }
-                
             }
         }
     }
@@ -701,7 +809,6 @@ main {
     }
 
     .project-and-case {
-        margin-top: 200px; //124px enl crito
 
         .container {
             padding: 0;
