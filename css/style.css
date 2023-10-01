@@ -844,11 +844,12 @@ main .project-and-case .container .project-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 28px;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 @media (min-width: 576px) {
   main .project-and-case .container .project-grid {
     grid-template-columns: 1fr 1fr;
+    margin-bottom: 80px;
   }
 }
 main .project-and-case .container .project-box .image-box {
@@ -911,4 +912,117 @@ main .project-and-case .container .project-btn {
 }
 main .project-and-case .container .project-btn .btn-black {
   text-decoration: none;
+}
+main .meet-team {
+  padding-bottom: 700px;
+  padding-top: 50px;
+  background: #EDCF86;
+}
+@media (min-width: 576px) {
+  main .meet-team {
+    padding-top: 125px;
+  }
+}
+@media (min-width: 576px) {
+  main .meet-team .container {
+    padding: 0;
+  }
+}
+main .meet-team .container .meet-team-top {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 576px) {
+  main .meet-team .container .meet-team-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+main .meet-team .container .meet-team-top .meet-team-titles h6 {
+  margin-bottom: 36px;
+}
+main .meet-team .container .meet-team-top .meet-team-titles h2 {
+  margin-bottom: 30px;
+}
+@media (min-width: 576px) {
+  main .meet-team .container .meet-team-top .meet-team-titles h2 {
+    margin-bottom: 100px;
+  }
+}
+main .meet-team .container .meet-team-top .meet-team-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .meet-team .container .meet-team-top .meet-team-btn .btn-yellow {
+  text-decoration: none;
+  border: 1px solid #191919;
+}
+main .meet-team .container .meet-team-bottom {
+  margin-top: 40px;
+}
+@media (min-width: 576px) {
+  main .meet-team .container .meet-team-bottom {
+    margin-top: 0;
+  }
+}
+main .meet-team .container .meet-team-bottom .meet-team-boxes {
+  margin-bottom: 55px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+@media (min-width: 576px) {
+  main .meet-team .container .meet-team-bottom .meet-team-boxes {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+@media (min-width: 992px) {
+  main .meet-team .container .meet-team-bottom .meet-team-boxes {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+  }
+}
+main .meet-team .container .meet-team-bottom .meet-team-boxes .meet-team-box {
+  justify-self: center;
+}
+main .meet-team .container .meet-team-bottom .meet-team-boxes .meet-team-box img {
+  width: auto;
+}
+@media (min-width: 576px) {
+  main .meet-team .container .meet-team-bottom .meet-team-boxes .meet-team-box img {
+    width: 250px;
+  }
+}
+@media (min-width: 768px) {
+  main .meet-team .container .meet-team-bottom .meet-team-boxes .meet-team-box img {
+    width: auto;
+  }
+}
+@media (min-width: 992px) {
+  main .meet-team .container .meet-team-bottom .meet-team-boxes .meet-team-box img {
+    width: 200px;
+  }
+}
+@media (min-width: 1200px) {
+  main .meet-team .container .meet-team-bottom .meet-team-boxes .meet-team-box img {
+    width: 250px;
+  }
+}
+@media (min-width: 1400px) {
+  main .meet-team .container .meet-team-bottom .meet-team-boxes .meet-team-box img {
+    width: auto;
+  }
+}
+main .meet-team .container .meet-team-bottom .meet-team-boxes .meet-team-box h3 {
+  margin-top: 28px;
+  margin-bottom: 8px;
+}
+main .meet-team .container .meet-team-bottom .meet-team-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
