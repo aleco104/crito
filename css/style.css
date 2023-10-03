@@ -40,7 +40,6 @@ p {
 
 .btn-yellow {
   background-color: #F9D783;
-  border: 1px solid #F9D783;
   color: #191919;
   font-size: 16px;
   font-weight: 600;
@@ -50,15 +49,15 @@ p {
   display: flex;
   align-items: center;
   border-radius: 40px;
+  transition: background-color 0.2s ease-in-out;
 }
 .btn-yellow i {
   margin-left: 12px;
 }
 .btn-yellow:hover {
-  font-weight: 500;
   background-color: #191919;
-  border: 1px solid #191919;
   color: white;
+  cursor: pointer;
 }
 
 .btn-transparent {
@@ -73,6 +72,7 @@ p {
   display: flex;
   align-items: center;
   border-radius: 40px;
+  transition: background-color 0.2s ease-in-out;
 }
 .btn-transparent i {
   margin-left: 12px;
@@ -81,7 +81,7 @@ p {
   background-color: #9b9b9b;
   border-color: #9b9b9b;
   color: #191919;
-  font-weight: 500;
+  cursor: pointer;
 }
 
 .btn-black {
@@ -96,6 +96,7 @@ p {
   border-radius: 40px;
   display: flex;
   align-items: center;
+  transition: background-color 0.2s ease-in-out;
 }
 .btn-black i {
   margin-left: 12px;
@@ -104,7 +105,6 @@ p {
   background-color: #9b9b9b;
   border-color: #9b9b9b;
   color: #191919;
-  font-weight: 500;
 }
 
 header {
@@ -500,6 +500,7 @@ main .about-company .container .about-company-left .left-blue-rectangle {
   z-index: 1;
   bottom: 30px;
   left: 0;
+  box-shadow: 0 10px 30px 10px rgba(136, 136, 136, 0.1294117647);
 }
 @media (min-width: 576px) {
   main .about-company .container .about-company-left .left-blue-rectangle {
@@ -606,6 +607,11 @@ main .about-company .container .about-company-right .company-right-bottom a span
   font-size: 16px;
   font-weight: 600;
   color: #191919;
+  transition: color 0.2s ease-in-out;
+}
+main .about-company .container .about-company-right .company-right-bottom a span:hover {
+  font-weight: 700;
+  color: #9b9b9b;
 }
 main .about-company .container .about-company-right .company-right-bottom .btn-black {
   margin-right: 20px;
@@ -629,9 +635,15 @@ main .about-company .container .about-company-right .company-right-bottom .video
   height: 48px;
   width: 48px;
   margin-right: 17px;
+  transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out;
 }
 main .about-company .container .about-company-right .company-right-bottom .video-btn i {
   color: #191919;
+}
+main .about-company .container .about-company-right .company-right-bottom .video-btn:hover {
+  background-color: #9b9b9b;
+  border-color: #9b9b9b;
+  cursor: pointer;
 }
 main .our-services {
   margin-top: 250px;
@@ -914,7 +926,6 @@ main .project-and-case .container .project-btn .btn-black {
   text-decoration: none;
 }
 main .meet-team {
-  padding-bottom: 700px;
   padding-top: 50px;
   background: #EDCF86;
 }
@@ -1025,4 +1036,82 @@ main .meet-team .container .meet-team-bottom .meet-team-carousel {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+main .testimonial {
+  padding-bottom: 200px;
+  padding-top: 72px;
+  background: #EDCF86;
+}
+main .testimonial .container {
+  background-color: white;
+  padding: 110px 40px;
+  position: relative;
+  z-index: 0;
+}
+main .testimonial .container .testimonial-white-box {
+  background-color: white;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: -100px;
+  right: -100px;
+  display: none;
+}
+@media (min-width: 1550px) {
+  main .testimonial .container .testimonial-white-box {
+    display: block;
+  }
+}
+main .testimonial .container .testimonial-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 80px;
+}
+main .testimonial .container .testimonial-boxes {
+  display: grid;
+  column-gap: 80px;
+  row-gap: 110px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+main .testimonial .container .testimonial-boxes .testimonial-box {
+  width: 350px;
+}
+main .testimonial .container .testimonial-boxes .testimonial-box p {
+  line-height: 34px;
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 19px;
+  margin-bottom: 30px;
+}
+main .testimonial .container .testimonial-boxes .testimonial-box .box-person {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "img info";
+  column-gap: 13px;
+}
+main .testimonial .container .testimonial-boxes .testimonial-box .box-person img {
+  grid-area: img;
+}
+main .testimonial .container .testimonial-boxes .testimonial-box .box-person .person-info {
+  grid-area: info;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .testimonial .container .testimonial-boxes .testimonial-box .box-person .person-info h6 {
+  font-size: 16px;
+  font-weight: 400;
+}
+main .testimonial .container .all-reviews-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 98px;
+}
+main .testimonial .container .all-reviews-btn a {
+  text-decoration: none;
 }
