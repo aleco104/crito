@@ -177,6 +177,7 @@ header {
                 a {
                     color: #191919;
                     margin-left: 12px;
+                    transition: color 0.2s ease-in-out;                    
 
                     &:hover {
                         color: #9b9b9b;
@@ -206,10 +207,24 @@ header {
                     font-size: 15px;
                     font-weight: 400;
                     margin-right: 28px;
+                    position: relative;
 
-                    &:hover {
-                        text-decoration: underline;
+                    &.active, &:hover {
+                        font-weight: 500;
                     }
+
+                    &.active::after, &:hover::after {
+                        content: "";
+                        display: block;
+                        width: 16px;
+                        height: 2px;
+                        background-color: #191919;
+                        position: absolute;
+                        left: 50%; /* Center horizontally */
+                        bottom: -13px; /* 13px below the bottom of the link */
+                        transform: translateX(-50%); /* Center horizontally */
+                      }
+
                 }        
             }
 
@@ -347,7 +362,11 @@ main {
 
     .customers {
         margin-top: 98px;
-        margin-bottom: 110px;
+        margin-bottom: 0;
+
+        @media (min-width: 576px) {
+            margin-bottom: 180px;
+        }
         
         .container {
             display: flex;
@@ -377,7 +396,7 @@ main {
         margin-top: 80px;
 
         @media (min-width: 576px) {
-            margin-top: 185px;
+            margin-top: 500;
         }
 
         .container {
@@ -385,15 +404,11 @@ main {
             grid-template-columns: 1fr;
             position: relative;
             column-gap: 20px;
-            row-gap: 60px;    
-            
-
-            @media (min-width: 768px) {
-                grid-template-columns: 30% 1fr;           
-            }
+            row-gap: 60px;
+            padding: 50px; 
 
             @media (min-width: 992px) {
-                grid-template-columns: 40% 1fr;           
+                grid-template-columns: 30% 1fr;           
             }
 
             @media (min-width: 1200px) {
@@ -423,11 +438,7 @@ main {
 
                 h2 {
                     margin-bottom: 46px;
-                    font-size: 32px;
-
-                    @media (min-width: 768px) {
-                        font-size: 37px;                        
-                    }
+                    font-size: 38px;
 
                     @media (min-width: 992px) {
                         font-size: 45px;                        
@@ -439,7 +450,7 @@ main {
                     justify-content: center;
                     align-items: center;
 
-                    @media (min-width: 768px) {
+                    @media (min-width: 992px) {
                         display: block;
                     }
 
@@ -456,23 +467,27 @@ main {
             .section-right {
                 display: flex;
                 flex-direction: column;
+                justify-content: center;
                 align-items: center;
-                //grid-template-columns: 1fr;
-                margin-left: 0;
                 gap: 30px;
 
-                @media (min-width: 450px) {
+                @media (min-width: 480px) {
                     display: grid;   
                     grid-template-columns: 1fr 1fr; 
-                        
                 }
 
-                @media (min-width: 768px) {
-                    margin-left: 120px;        
+                @media (min-width: 992px) {
+                    margin-left: 100px;        
                 }
 
                 .features-box {
-                    width: 200px;
+                    width: min(200px, 90vw);
+                    border: 1px solid #d1d1d1;
+                    padding: 20px; 
+
+                    @media (min-width: 450px) {
+                        border: none;
+                    }
 
                     @media (min-width: 1200px) {
                         width: 300px;
@@ -808,7 +823,7 @@ main {
         }
     }
 
-    .choose-us-section {
+    .choose-us {
         padding: 20px;
         margin-top: 20px;
         position: relative;
@@ -1362,7 +1377,11 @@ main {
             }
 
             h2 {
-                font-size: 30px;
+                font-size: 25px;
+
+                @media (min-width: 436px) {
+                    font-size: 30px;
+                }
 
                 @media (min-width: 1200px) {
                     font-size: 45px;
