@@ -1426,3 +1426,186 @@ main {
         }
     }
 }
+
+footer {
+    background-color: #0E1021;
+    padding: 60px 0 10px 0;
+
+    @media (min-width: 1200px) {
+        padding: 118px 0 10px 0;
+    }
+
+    p {
+        color: #B6B7BC;
+    }
+
+    .footer-part-one {
+        position: relative;
+        z-index: 0;
+
+        .container {
+            padding-bottom: 20px;
+            padding-left: 50px;
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 30px;
+            grid-template-areas:    "co"
+                                    "he" 
+                                    "re"
+                                    "li"
+                                    "crito";
+
+            @media (min-width: 500px) {
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas:    "co he" 
+                                        "re li"
+                                        "crito crito";
+            }
+
+            @media (min-width: 576px) {
+                padding-left: 0;
+                grid-template-columns: 1fr 1fr 1fr;
+                row-gap: 40px;
+                grid-template-areas:    "co he re" 
+                                        "li .. .."
+                                        "crito crito crito";
+            }
+
+            @media (min-width: 768px) {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                row-gap: 60px;
+                grid-template-areas:    "co he re li" 
+                                        "crito crito crito crito";
+            }
+
+            @media (min-width: 1200px) {
+                grid-template-columns: 5fr 2fr 2fr 2fr 2fr;
+                grid-template-areas:  "crito co he re li";
+            }
+
+            .footer-presentation {
+                padding-right: 0;
+                grid-area: crito;
+                padding-top: 40px;
+
+                @media (min-width: 992px) {
+                    padding-right: 120px;
+                    padding-top: 0;
+                }
+
+                @media (min-width: 1200px) {
+                    padding-right: 180px;
+                }
+
+                img {
+                    margin-top: -15px;
+                    margin-bottom: 35px;
+                }
+            }
+
+            .footer-company {
+                grid-area: co;
+            }
+
+            .footer-help {
+                grid-area: he;
+            }
+
+            .footer-resources {
+                grid-area: re;
+            }
+
+            .footer-link {
+                grid-area: li;
+            }
+        
+            .footer-top-box {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                
+                h3 {
+                    margin-bottom: 0;
+
+                    @media (min-width: 768px) {
+                        margin-bottom: 10px;
+                    }
+ 
+                    @media (min-width: 992px) {
+                        margin-bottom: 32px;
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    color: #B6B7BC;
+                    font-weight: 500;
+                    font-size: 16px;
+                    transition: text-shadow 0.1s ease-in-out;
+
+                    &:hover {
+                        text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.555); /* Lägg till en skugga när du hovrar över länken */
+                    }
+                }
+            }
+            
+            h3 {
+                color: #fff;
+            }
+        }
+
+        .footer-waves {
+            position: absolute;
+            z-index: 1;
+            right: 0;
+            bottom: 0;
+            opacity: 0.4;
+        }
+    }    
+
+    .footer-part-two {
+        border-top: 1px solid #3E404D;
+
+        .container {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+
+            
+            @media (min-width: 768px) {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .footer-two-left {
+                margin-top: 28px;
+            }
+
+            .footer-two-right {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .footer-socialmedia {
+                    margin-top: 20px;
+                    
+                    @media (min-width: 768px) {
+                        margin-top: 0;
+                    }
+
+                    a {
+                        color: #fff;
+                        margin-left: 26px;
+                        transition: color 0.2s ease-in-out;
+
+                        &:hover {
+                            color: #9b9b9b;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+

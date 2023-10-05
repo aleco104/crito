@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,900&display=swap");
 * {
@@ -1299,4 +1300,164 @@ main .newsletter .container form input {
 }
 main .newsletter .container form .newsletter-subscribe button {
   border: none;
+}
+
+footer {
+  background-color: #0E1021;
+  padding: 60px 0 10px 0;
+}
+@media (min-width: 1200px) {
+  footer {
+    padding: 118px 0 10px 0;
+  }
+}
+footer p {
+  color: #B6B7BC;
+}
+footer .footer-part-one {
+  position: relative;
+  z-index: 0;
+}
+footer .footer-part-one .container {
+  padding-bottom: 20px;
+  padding-left: 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
+  grid-template-areas: "co" "he" "re" "li" "crito";
+}
+@media (min-width: 500px) {
+  footer .footer-part-one .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "co he" "re li" "crito crito";
+  }
+}
+@media (min-width: 576px) {
+  footer .footer-part-one .container {
+    padding-left: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 40px;
+    grid-template-areas: "co he re" "li .. .." "crito crito crito";
+  }
+}
+@media (min-width: 768px) {
+  footer .footer-part-one .container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 60px;
+    grid-template-areas: "co he re li" "crito crito crito crito";
+  }
+}
+@media (min-width: 1200px) {
+  footer .footer-part-one .container {
+    grid-template-columns: 5fr 2fr 2fr 2fr 2fr;
+    grid-template-areas: "crito co he re li";
+  }
+}
+footer .footer-part-one .container .footer-presentation {
+  padding-right: 0;
+  grid-area: crito;
+  padding-top: 40px;
+}
+@media (min-width: 992px) {
+  footer .footer-part-one .container .footer-presentation {
+    padding-right: 120px;
+    padding-top: 0;
+  }
+}
+@media (min-width: 1200px) {
+  footer .footer-part-one .container .footer-presentation {
+    padding-right: 180px;
+  }
+}
+footer .footer-part-one .container .footer-presentation img {
+  margin-top: -15px;
+  margin-bottom: 35px;
+}
+footer .footer-part-one .container .footer-company {
+  grid-area: co;
+}
+footer .footer-part-one .container .footer-help {
+  grid-area: he;
+}
+footer .footer-part-one .container .footer-resources {
+  grid-area: re;
+}
+footer .footer-part-one .container .footer-link {
+  grid-area: li;
+}
+footer .footer-part-one .container .footer-top-box {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+footer .footer-part-one .container .footer-top-box h3 {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  footer .footer-part-one .container .footer-top-box h3 {
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 992px) {
+  footer .footer-part-one .container .footer-top-box h3 {
+    margin-bottom: 32px;
+  }
+}
+footer .footer-part-one .container .footer-top-box a {
+  text-decoration: none;
+  color: #B6B7BC;
+  font-weight: 500;
+  font-size: 16px;
+  transition: text-shadow 0.1s ease-in-out;
+}
+footer .footer-part-one .container .footer-top-box a:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.555); /* Lägg till en skugga när du hovrar över länken */
+}
+footer .footer-part-one .container h3 {
+  color: #fff;
+}
+footer .footer-part-one .footer-waves {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  opacity: 0.4;
+}
+footer .footer-part-two {
+  border-top: 1px solid #3E404D;
+}
+footer .footer-part-two .container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  footer .footer-part-two .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+footer .footer-part-two .container .footer-two-left {
+  margin-top: 28px;
+}
+footer .footer-part-two .container .footer-two-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-part-two .container .footer-two-right .footer-socialmedia {
+  margin-top: 20px;
+}
+@media (min-width: 768px) {
+  footer .footer-part-two .container .footer-two-right .footer-socialmedia {
+    margin-top: 0;
+  }
+}
+footer .footer-part-two .container .footer-two-right .footer-socialmedia a {
+  color: #fff;
+  margin-left: 26px;
+  transition: color 0.2s ease-in-out;
+}
+footer .footer-part-two .container .footer-two-right .footer-socialmedia a:hover {
+  color: #9b9b9b;
 }
