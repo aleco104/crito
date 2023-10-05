@@ -1461,3 +1461,83 @@ footer .footer-part-two .container .footer-two-right .footer-socialmedia a {
 footer .footer-part-two .container .footer-two-right .footer-socialmedia a:hover {
   color: #9b9b9b;
 }
+
+main .lets-connect {
+  background-color: #F0EFE9;
+  padding: 90px 0 102px 0;
+  align-items: center;
+  position: relative;
+}
+main .lets-connect .container .header-titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .lets-connect .container .header-titles .header-title-top {
+  display: flex;
+}
+main .lets-connect .container .header-titles .header-title-top a {
+  text-decoration: none;
+  color: #191919;
+  margin-right: 15px;
+  transition: font-weight 0.15s ease-in-out, color 0.1s ease-in-out;
+}
+main .lets-connect .container .header-titles .header-title-top a:hover {
+  font-weight: 500;
+  color: #9b9b9b;
+}
+main .lets-connect .container .header-titles .header-title-top p {
+  color: #191919;
+  font-weight: 500;
+}
+main .lets-connect .container .header-titles .header-title h1 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 46px;
+  font-weight: 700;
+}
+@media (min-width: 850px) {
+  main .lets-connect .container .header-titles .header-title h1 {
+    font-size: 56px;
+  }
+}
+main .lets-connect .background-waves {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 90%;
+}
+@media (min-width: 850px) {
+  main .lets-connect .background-waves {
+    width: auto;
+  }
+}
+main .contact-us {
+  padding: 120px 0 100px 0;
+}
+main .contact-us .container .contact-us-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  gap: 30px;
+}
+main .contact-us .container .contact-us-boxes .contact-us-box {
+  border: 1px solid #D1D1D1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+}
+main .contact-us .container .contact-us-boxes .contact-us-box a {
+  position: absolute;
+  z-index: 1;
+  left: 60px;
+  top: 48px;
+}
+main .contact-us .container .contact-us-boxes .contact-us-box .box-text {
+  margin: 60px 0 36px 45px;
+}
+main .contact-us .container .contact-us-boxes .contact-us-box .box-text p {
+  font-size: 18px;
+}
