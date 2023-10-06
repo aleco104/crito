@@ -122,8 +122,8 @@ header {
   
     .container {
         display: flex;
-        justify-content: space-between;        
-        
+        justify-content: space-between;
+                
         @media (min-width: 768px) {
         display:grid;
         grid-template-columns: auto 1fr;
@@ -280,6 +280,11 @@ main {
             display: flex;
             text-align: left;
             align-items: center;
+            padding-left: 30px;
+
+            @media (min-width: 576px) {
+                padding-left: auto;
+            }
 
             .content {
                 display: block;
@@ -292,11 +297,10 @@ main {
 
                     @media (min-width:768px) {
                         font-weight: 700;
-                        font-size: 80px;
+                        font-size: 70px;
                     }
 
                     @media (min-width:1400px) {
-                        font-weight: 700;
                         font-size: 96px;
                     }
                 }
@@ -313,27 +317,11 @@ main {
                     text-decoration: none;
                 }
 
-                .btn-yellow {
-                    margin-right: 0px;
-                    text-align: center;
-
-                    @media (min-width: 426px) {
-                        margin-right: 12px;
-                        text-align: left;
-                    }
-                }
-
-                .btn-transparent {
-                    text-align: center;
-
-                    @media (min-width: 426px) {
-                        text-align: left;
-                    }
-                }
-
                 .buttons {
                     display: flex;
                     flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
                     gap: 20px;
                     
                     @media (min-width: 453px) {
@@ -344,6 +332,36 @@ main {
                     .btn-yellow, .btn-transparent {
                         max-width: 220px;
                     }
+
+                    .btn-yellow {
+                        padding: 0;
+                        justify-content: center;
+                        gap: 12px;
+
+                        i {
+                           margin: 0;
+                        }
+
+                        @media (min-width: 450px) {
+                            padding-right: 35px; 
+                            padding-left: 35px;
+                        }
+                    }
+
+                    .btn-transparent {
+                        padding: 0;
+                        justify-content: center;
+                        gap: 12px;
+
+                        i {
+                            margin: 0;
+                        }
+
+                        @media (min-width: 450px) {
+                            padding-right: 35px; 
+                            padding-left: 35px;
+                        }
+                    }                       
                 }
             }
 
@@ -363,14 +381,24 @@ main {
         margin-top: 98px;
         margin-bottom: 0;
 
-        @media (min-width: 576px) {
-            margin-bottom: 180px;
+        @media (min-width: 768px) {
+            margin-bottom: 130px;
         }
         
         .container {
-            display: flex;
-            justify-content: space-between;
-            padding: 0 15px;
+            display: grid;
+            grid-template-columns: repeat(6, auto);
+            grid-template-areas:    "c1 c1 c2 c2  c3 c3"
+                                    ".. c4 c4 c5 c5 ..";
+            gap: 30px;
+            padding-left: 30px;
+
+
+            @media (min-width: 576px) {
+                display: flex;
+                justify-content: space-between;
+                padding: 0 15px;
+            }
 
             @media (min-width: 1400px) {
                 padding-right: 48px;
@@ -388,11 +416,30 @@ main {
                     width: auto;
                 }
             }
+
+            .customer1 {
+                grid-area: c1;
+            }
+
+            .customer2 {
+                grid-area: c2;
+            }
+
+            .customer3 {
+                grid-area: c3;
+            }
+
+            .customer4 {
+                grid-area: c4;
+            }
+
+            .customer5 {
+                grid-area: c5;
+            }
         }
     }
 
     .features {
-        margin-top: 80px;
 
         @media (min-width: 576px) {
             margin-top: 500;
@@ -404,7 +451,6 @@ main {
             position: relative;
             column-gap: 20px;
             row-gap: 60px;
-            padding: 50px; 
 
             @media (min-width: 992px) {
                 grid-template-columns: 30% 1fr;           
@@ -423,7 +469,7 @@ main {
                 @media (min-width: 1530px) {
                     display: block;
                     top: -84px;
-                    bottom: -153px;
+                    bottom: -50px;
                     left: -95px;
                     right: -100px;          
                 }
@@ -502,10 +548,10 @@ main {
     }
 
     .about-company {
-        margin-top: 100px;
+        padding-top: 100px;
 
         @media (min-width: 992px) {
-            margin-top: 250px;
+            padding-top: 140px;
         }
 
         .container {
@@ -539,7 +585,7 @@ main {
 
                 img {
                     margin-top: 30px;
-                    width: 350px;
+                    width: min(350px, 90%);
 
                     @media (min-width: 1200px) {
                         width: auto;
@@ -653,8 +699,17 @@ main {
 
                 .company-right-bottom {
                     display: flex;
+                    flex-direction: column;
                     justify-content: start;
-                    align-items: center;
+                    gap: 20px;
+
+                    @media (min-width: 400px) {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: start;
+                        align-items: center;
+                        gap: 0;
+                    }
 
                     a {
                         text-decoration: none;
@@ -675,6 +730,7 @@ main {
 
                     .btn-black {
                         margin-right: 20px;
+                        max-width: 200px;
 
                         @media (min-width: 576px) {
                             margin-right: 39px;
@@ -683,7 +739,6 @@ main {
 
                     .video-link {
                         display: flex;
-                        justify-content: center;
                         align-items: center;
                     }
 
@@ -714,10 +769,15 @@ main {
     }
 
     .our-services {
-        margin-top: 250px;
+        margin-top: 120px;
         background-color: #F0EFE9;
-        padding-top: 120px;
-        padding-bottom: 120px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        @media (min-width: 576px) {
+            padding-top: 120px;
+            padding-bottom: 120px;
+        }
 
         .container {
             
@@ -823,13 +883,12 @@ main {
     }
 
     .choose-us {
-        padding: 20px;
-        margin-top: 20px;
+        padding: 16px;
         position: relative;
         z-index: 0;
 
         @media (min-width: 576px) {
-            padding: 65px;
+            padding: 65px 0 18px 0;
         }
 
         .container {
@@ -846,11 +905,23 @@ main {
             }
 
             .choose-us-titles {
-                margin-bottom: 44px;
+                margin-bottom: 30px;
                 grid-area: titles;
+
+                @media (min-width: 576px) {
+                    margin-bottom: 44px;
+                }
 
                 h6 {
                     margin-bottom: 34px;
+                }
+
+                h2 {
+                    font-size: 35px;
+
+                    @media (min-width: 576px) {
+                        font-size: 45px;
+                    }
                 }
             }
 
@@ -883,11 +954,18 @@ main {
                 grid-area: img;
                 margin-top: 0;
                 margin-bottom: 40px;
+                display: flex;
+                justify-content: center;
+
+                @media (min-width: 576px) {
+                    display: block;
+                }
 
                 img {
-                    width: 300px;
+                    width: min(300px, 90%);
 
                     @media (min-width: 576px) {
+                        margin-left: 0;
                         width: auto;
                         margin-top: 0;
                         width: 400px;
@@ -1151,19 +1229,25 @@ main {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    padding-bottom: 50px;
+
+                    @media (min-width: 576px) {
+                        padding-bottom: 70px;
+
+                    }
                 }
             }
         }
     }
 
     .testimonial {
-        padding-bottom: 200px;
-        padding-top: 72px;
-        background: #EDCF86;
+        background-color: #EDCF86;
+        padding-bottom: 120px;
+        padding-top: 0;         
 
         .container {
             background-color: white;
-            padding: 110px 40px;
+            padding: 120px 40px;
             position: relative;
             z-index: 0;
 
@@ -1251,7 +1335,7 @@ main {
         padding: 80px 40px 90px 40px;
 
             @media (min-width: 576px) {
-                padding: 100px;
+                padding-top: 120px;
                 padding-bottom: 90px;
             }
 
@@ -1347,8 +1431,8 @@ main {
     .newsletter {
         background-color: #F0EFE9;
         position: relative;
-        padding-top: 100px; 
-        padding-bottom: 95px; 
+        padding-top: 107px; 
+        padding-bottom: 100px; 
         z-index: 0;
     
         .background-wavy-lines {
@@ -1432,7 +1516,7 @@ footer {
     padding: 60px 0 10px 0;
 
     @media (min-width: 1200px) {
-        padding: 118px 0 10px 0;
+        padding: 132px 0 10px 0;
     }
 
     p {
@@ -1444,7 +1528,7 @@ footer {
         z-index: 0;
 
         .container {
-            padding-bottom: 20px;
+            padding-bottom: 85px;
             padding-left: 50px;
             display: grid;
             grid-template-columns: 1fr;

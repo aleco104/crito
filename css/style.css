@@ -256,6 +256,12 @@ main .showcase .container {
   display: flex;
   text-align: left;
   align-items: center;
+  padding-left: 30px;
+}
+@media (min-width: 576px) {
+  main .showcase .container {
+    padding-left: auto;
+  }
 }
 main .showcase .container .content {
   display: block;
@@ -269,12 +275,11 @@ main .showcase .container .content h1 {
 @media (min-width: 768px) {
   main .showcase .container .content h1 {
     font-weight: 700;
-    font-size: 80px;
+    font-size: 70px;
   }
 }
 @media (min-width: 1400px) {
   main .showcase .container .content h1 {
-    font-weight: 700;
     font-size: 96px;
   }
 }
@@ -288,27 +293,11 @@ main .showcase .container .content p {
 main .showcase .container .content a {
   text-decoration: none;
 }
-main .showcase .container .content .btn-yellow {
-  margin-right: 0px;
-  text-align: center;
-}
-@media (min-width: 426px) {
-  main .showcase .container .content .btn-yellow {
-    margin-right: 12px;
-    text-align: left;
-  }
-}
-main .showcase .container .content .btn-transparent {
-  text-align: center;
-}
-@media (min-width: 426px) {
-  main .showcase .container .content .btn-transparent {
-    text-align: left;
-  }
-}
 main .showcase .container .content .buttons {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  text-align: center;
   gap: 20px;
 }
 @media (min-width: 453px) {
@@ -319,6 +308,34 @@ main .showcase .container .content .buttons {
 }
 main .showcase .container .content .buttons .btn-yellow, main .showcase .container .content .buttons .btn-transparent {
   max-width: 220px;
+}
+main .showcase .container .content .buttons .btn-yellow {
+  padding: 0;
+  justify-content: center;
+  gap: 12px;
+}
+main .showcase .container .content .buttons .btn-yellow i {
+  margin: 0;
+}
+@media (min-width: 450px) {
+  main .showcase .container .content .buttons .btn-yellow {
+    padding-right: 35px;
+    padding-left: 35px;
+  }
+}
+main .showcase .container .content .buttons .btn-transparent {
+  padding: 0;
+  justify-content: center;
+  gap: 12px;
+}
+main .showcase .container .content .buttons .btn-transparent i {
+  margin: 0;
+}
+@media (min-width: 450px) {
+  main .showcase .container .content .buttons .btn-transparent {
+    padding-right: 35px;
+    padding-left: 35px;
+  }
 }
 main .showcase .container img {
   display: none;
@@ -333,15 +350,24 @@ main .customers {
   margin-top: 98px;
   margin-bottom: 0;
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   main .customers {
-    margin-bottom: 180px;
+    margin-bottom: 130px;
   }
 }
 main .customers .container {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 15px;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-template-areas: "c1 c1 c2 c2  c3 c3" ".. c4 c4 c5 c5 ..";
+  gap: 30px;
+  padding-left: 30px;
+}
+@media (min-width: 576px) {
+  main .customers .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+  }
 }
 @media (min-width: 1400px) {
   main .customers .container {
@@ -362,8 +388,20 @@ main .customers .container img {
     width: auto;
   }
 }
-main .features {
-  margin-top: 80px;
+main .customers .container .customer1 {
+  grid-area: c1;
+}
+main .customers .container .customer2 {
+  grid-area: c2;
+}
+main .customers .container .customer3 {
+  grid-area: c3;
+}
+main .customers .container .customer4 {
+  grid-area: c4;
+}
+main .customers .container .customer5 {
+  grid-area: c5;
 }
 @media (min-width: 576px) {
   main .features {
@@ -376,7 +414,6 @@ main .features .container {
   position: relative;
   column-gap: 20px;
   row-gap: 60px;
-  padding: 50px;
 }
 @media (min-width: 992px) {
   main .features .container {
@@ -398,7 +435,7 @@ main .features .container .features-border {
   main .features .container .features-border {
     display: block;
     top: -84px;
-    bottom: -153px;
+    bottom: -50px;
     left: -95px;
     right: -100px;
   }
@@ -470,11 +507,11 @@ main .features .container .section-right .features-box h3 {
   margin-bottom: 22px;
 }
 main .about-company {
-  margin-top: 100px;
+  padding-top: 100px;
 }
 @media (min-width: 992px) {
   main .about-company {
-    margin-top: 250px;
+    padding-top: 140px;
   }
 }
 main .about-company .container {
@@ -510,7 +547,7 @@ main .about-company .container .about-company-left {
 }
 main .about-company .container .about-company-left img {
   margin-top: 30px;
-  width: 350px;
+  width: min(350px, 90%);
 }
 @media (min-width: 1200px) {
   main .about-company .container .about-company-left img {
@@ -622,8 +659,18 @@ main .about-company .container .about-company-right .company-right-top p {
 }
 main .about-company .container .about-company-right .company-right-bottom {
   display: flex;
+  flex-direction: column;
   justify-content: start;
-  align-items: center;
+  gap: 20px;
+}
+@media (min-width: 400px) {
+  main .about-company .container .about-company-right .company-right-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 0;
+  }
 }
 main .about-company .container .about-company-right .company-right-bottom a {
   text-decoration: none;
@@ -641,6 +688,7 @@ main .about-company .container .about-company-right .company-right-bottom a span
 }
 main .about-company .container .about-company-right .company-right-bottom .btn-black {
   margin-right: 20px;
+  max-width: 200px;
 }
 @media (min-width: 576px) {
   main .about-company .container .about-company-right .company-right-bottom .btn-black {
@@ -649,7 +697,6 @@ main .about-company .container .about-company-right .company-right-bottom .btn-b
 }
 main .about-company .container .about-company-right .company-right-bottom .video-link {
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 main .about-company .container .about-company-right .company-right-bottom .video-btn {
@@ -672,10 +719,16 @@ main .about-company .container .about-company-right .company-right-bottom .video
   cursor: pointer;
 }
 main .our-services {
-  margin-top: 250px;
+  margin-top: 120px;
   background-color: #F0EFE9;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media (min-width: 576px) {
+  main .our-services {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 }
 @media (min-width: 576px) {
   main .our-services .container {
@@ -759,14 +812,13 @@ main .our-services .container .services-btn a {
   text-decoration: none;
 }
 main .choose-us {
-  padding: 20px;
-  margin-top: 20px;
+  padding: 16px;
   position: relative;
   z-index: 0;
 }
 @media (min-width: 576px) {
   main .choose-us {
-    padding: 65px;
+    padding: 65px 0 18px 0;
   }
 }
 main .choose-us .container {
@@ -781,11 +833,24 @@ main .choose-us .container {
   }
 }
 main .choose-us .container .choose-us-titles {
-  margin-bottom: 44px;
+  margin-bottom: 30px;
   grid-area: titles;
+}
+@media (min-width: 576px) {
+  main .choose-us .container .choose-us-titles {
+    margin-bottom: 44px;
+  }
 }
 main .choose-us .container .choose-us-titles h6 {
   margin-bottom: 34px;
+}
+main .choose-us .container .choose-us-titles h2 {
+  font-size: 35px;
+}
+@media (min-width: 576px) {
+  main .choose-us .container .choose-us-titles h2 {
+    font-size: 45px;
+  }
 }
 main .choose-us .container .choose-us-boxes {
   grid-area: boxes;
@@ -810,12 +875,20 @@ main .choose-us .container .choose-us-img {
   grid-area: img;
   margin-top: 0;
   margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 576px) {
+  main .choose-us .container .choose-us-img {
+    display: block;
+  }
 }
 main .choose-us .container .choose-us-img img {
-  width: 300px;
+  width: min(300px, 90%);
 }
 @media (min-width: 576px) {
   main .choose-us .container .choose-us-img img {
+    margin-left: 0;
     width: auto;
     margin-top: 0;
     width: 400px;
@@ -1062,15 +1135,21 @@ main .meet-team .container .meet-team-bottom .meet-team-carousel {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 50px;
+}
+@media (min-width: 576px) {
+  main .meet-team .container .meet-team-bottom .meet-team-carousel {
+    padding-bottom: 70px;
+  }
 }
 main .testimonial {
-  padding-bottom: 200px;
-  padding-top: 72px;
-  background: #EDCF86;
+  background-color: #EDCF86;
+  padding-bottom: 120px;
+  padding-top: 0;
 }
 main .testimonial .container {
   background-color: white;
-  padding: 110px 40px;
+  padding: 120px 40px;
   position: relative;
   z-index: 0;
 }
@@ -1146,7 +1225,7 @@ main .article {
 }
 @media (min-width: 576px) {
   main .article {
-    padding: 100px;
+    padding-top: 120px;
     padding-bottom: 90px;
   }
 }
@@ -1225,8 +1304,8 @@ main .article .container .article-bottom .article-bottom-carousel {
 main .newsletter {
   background-color: #F0EFE9;
   position: relative;
-  padding-top: 100px;
-  padding-bottom: 95px;
+  padding-top: 107px;
+  padding-bottom: 100px;
   z-index: 0;
 }
 main .newsletter .background-wavy-lines {
@@ -1308,7 +1387,7 @@ footer {
 }
 @media (min-width: 1200px) {
   footer {
-    padding: 118px 0 10px 0;
+    padding: 132px 0 10px 0;
   }
 }
 footer p {
@@ -1319,7 +1398,7 @@ footer .footer-part-one {
   z-index: 0;
 }
 footer .footer-part-one .container {
-  padding-bottom: 20px;
+  padding-bottom: 85px;
   padding-left: 50px;
   display: grid;
   grid-template-columns: 1fr;
