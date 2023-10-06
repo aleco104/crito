@@ -78,7 +78,6 @@
         <section class="contact-us">
             <div class="container">
                 <div class="contact-us-boxes">
-
                     <div class="contact-us-box">
                         <a href="#">
                             <img src="images/contact-us1.svg" alt="">
@@ -88,7 +87,6 @@
                             <p>Sveavägen 31<br>111 34 STOCKHOLM</p>
                         </div>
                     </div>
-                    
                     <div class="contact-us-box">
                         <a href="#">
                             <img src="images/contact-us2.svg" alt="">
@@ -107,8 +105,20 @@
                             <p>info@crito.com<br>support@crito.com</p>
                         </div>
                     </div>
-
                 </div>
+            </div>
+        </section>
+
+        <!-- LEAVE MESSAGE SECTION -->
+        <section class="leave-message">
+            <div class="container">
+                <h2>Leave us a message<br>for any information.</h2>
+                <form id="leave-message-form" method="post">
+                    <input type="text" id="messageName" name="messageName" title="Name" placeholder="Name*" tabindex="1"> 
+                    <input type="email" id="messageMail" name="messageMail" title="Email" placeholder="Email*" tabindex="2">
+                    <textarea id="message" name="message" placeholder="Your Message*"></textarea>
+                    <button type="submit" class="btn-yellow">Send Message<i class="fa-regular fa-arrow-up-right"></i></button>
+                </form>   
             </div>
         </section>
 

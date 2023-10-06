@@ -1517,9 +1517,20 @@ main .contact-us {
 }
 main .contact-us .container .contact-us-boxes {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-content: center;
   gap: 30px;
+}
+@media (min-width: 768px) {
+  main .contact-us .container .contact-us-boxes {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 992px) {
+  main .contact-us .container .contact-us-boxes {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 main .contact-us .container .contact-us-boxes .contact-us-box {
   border: 1px solid #D1D1D1;
@@ -1532,12 +1543,93 @@ main .contact-us .container .contact-us-boxes .contact-us-box {
 main .contact-us .container .contact-us-boxes .contact-us-box a {
   position: absolute;
   z-index: 1;
-  left: 60px;
+  left: 25px;
   top: 48px;
+}
+@media (min-width: 768px) {
+  main .contact-us .container .contact-us-boxes .contact-us-box a {
+    left: 60px;
+    top: 48px;
+  }
+}
+@media (min-width: 768px) {
+  main .contact-us .container .contact-us-boxes .contact-us-box a {
+    left: 15px;
+    top: 48px;
+  }
+}
+@media (min-width: 1200px) {
+  main .contact-us .container .contact-us-boxes .contact-us-box a {
+    left: 30px;
+    top: 48px;
+  }
+}
+@media (min-width: 1400px) {
+  main .contact-us .container .contact-us-boxes .contact-us-box a {
+    left: 60px;
+    top: 48px;
+  }
 }
 main .contact-us .container .contact-us-boxes .contact-us-box .box-text {
   margin: 60px 0 36px 45px;
 }
 main .contact-us .container .contact-us-boxes .contact-us-box .box-text p {
   font-size: 18px;
+}
+main .leave-message .container {
+  padding: 50px 0 70px 0;
+  background-color: #F0EFE9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 576px) {
+  main .leave-message .container {
+    padding: 125px 0 102px 0;
+  }
+}
+main .leave-message .container h2 {
+  margin-bottom: 28px;
+  margin-left: 20px;
+}
+@media (min-width: 576px) {
+  main .leave-message .container h2 {
+    margin-left: 0;
+  }
+}
+main .leave-message .container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  width: 90%;
+}
+@media (min-width: 1200px) {
+  main .leave-message .container form {
+    width: 1021px;
+  }
+}
+main .leave-message .container form input {
+  border: none;
+  height: 56px;
+  border-radius: 28px;
+  padding-left: 35px;
+  color: #8B8B8B;
+}
+main .leave-message .container form textarea {
+  height: 160px;
+  resize: none;
+  border: none;
+  border-radius: 40px;
+  padding-top: 18px;
+  padding-left: 35px;
+  color: #8B8B8B;
+}
+main .leave-message .container form button {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 27px;
 }
