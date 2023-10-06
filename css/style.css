@@ -937,7 +937,7 @@ main .project-and-case .container .project-box .box-btn a {
   margin-top: 32px;
 }
 main .project-and-case .container .project-box .box-btn a:hover {
-  font-weight: 700;
+  font-weight: 600;
 }
 main .project-and-case .container .project-box .box-btn i {
   margin-left: 7px;
@@ -1546,6 +1546,12 @@ main .contact-us .container .contact-us-boxes .contact-us-box a {
   left: 25px;
   top: 48px;
 }
+main .contact-us .container .contact-us-boxes .contact-us-box a img {
+  transition: transform 0.15s ease-in-out;
+}
+main .contact-us .container .contact-us-boxes .contact-us-box a img:hover {
+  transform: scale(1.1);
+}
 @media (min-width: 768px) {
   main .contact-us .container .contact-us-boxes .contact-us-box a {
     left: 60px;
@@ -1575,6 +1581,9 @@ main .contact-us .container .contact-us-boxes .contact-us-box .box-text {
 }
 main .contact-us .container .contact-us-boxes .contact-us-box .box-text p {
   font-size: 18px;
+}
+main .leave-message {
+  margin-bottom: 120px;
 }
 main .leave-message .container {
   padding: 50px 0 70px 0;
@@ -1632,4 +1641,7 @@ main .leave-message .container form button {
   justify-content: center;
   align-items: center;
   margin-top: 27px;
+}
+main .crito-map {
+  background-color: #0E1021;
 }
