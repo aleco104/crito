@@ -1,8 +1,3 @@
-* {
-    box-sizing:border-box;  
-    //border:solid 1px;  
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,900&display=swap');
 
@@ -45,7 +40,7 @@ p {
     color: #191919;
     font-size: 16px;
     font-weight: 600;
-    height: 56px;
+    height: 50px;
     padding-right: 35px; 
     padding-left: 35px;
     display: flex;
@@ -70,7 +65,7 @@ p {
     color: #191919;
     font-size: 16px;
     font-weight: 600;
-    height: 56px;
+    height: 50px;
     padding-right: 35px; 
     padding-left: 35px;
     display: flex;
@@ -96,7 +91,7 @@ p {
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 600;
-    height: 56px;
+    height: 50px;
     padding-right: 35px; 
     padding-left: 35px;
     border-radius: 40px;
@@ -117,7 +112,7 @@ p {
 
 header {
     background-color: #F0EFE9;
-    padding: 30px;
+    padding: 15px;
     align-items: center;
   
     .container {
@@ -187,6 +182,7 @@ header {
 
         .content-bottom {   
             display: none;
+            padding-top: 21px;
 
             @media (min-width: 768px) {
                 display: flex;
@@ -198,7 +194,7 @@ header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 40px;
+            margin-bottom: 12px;
 
                 a {
                     color: #191919;
@@ -219,11 +215,10 @@ header {
                         height: 2px;
                         background-color: #191919;
                         position: absolute;
-                        left: 50%; /* Center horizontally */
-                        bottom: -13px; /* 13px below the bottom of the link */
-                        transform: translateX(-50%); /* Center horizontally */
-                      }
-
+                        left: 50%;
+                        bottom: -6px; 
+                        transform: translateX(-50%); 
+                    }
                 }        
             }
 
@@ -231,7 +226,6 @@ header {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin-right: -8px;
             
                 a {
                     text-decoration: none;
@@ -378,11 +372,15 @@ main {
     }
 
     .customers {
-        margin-top: 98px;
-        margin-bottom: 0;
+        padding-top: 98px;
+        padding-bottom: 30px;
 
         @media (min-width: 768px) {
-            margin-bottom: 130px;
+            padding-bottom: 50px;
+        }
+
+        @media (min-width: 992px) {
+            padding-bottom: 130px;
         }
         
         .container {
@@ -392,7 +390,6 @@ main {
                                     ".. c4 c4 c5 c5 ..";
             gap: 30px;
             padding-left: 30px;
-
 
             @media (min-width: 576px) {
                 display: flex;
@@ -440,10 +437,7 @@ main {
     }
 
     .features {
-
-        @media (min-width: 576px) {
-            margin-top: 500;
-        }
+        padding-top: 50px;
 
         .container {
             display: grid;
@@ -826,21 +820,21 @@ main {
                         align-items: center;
 
                         a {
-                                background-color: #191919;
-                                border: 1px solid #191919;
-                                font-size: 18px;
-                                height: 56px;
-                                width: 56px;
-                                border-radius: 40px;
-                                text-decoration: none;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
+                            background-color: #191919;
+                            border: 1px solid #191919;
+                            font-size: 18px;
+                            height: 56px;
+                            width: 56px;
+                            border-radius: 40px;
+                            text-decoration: none;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
 
-                                &:hover {
-                                    background-color: #A4A4A4;
-                                    border: 1px solid #A4A4A4;
-                                }
+                            &:hover {
+                                background-color: #A4A4A4;
+                                border: 1px solid #A4A4A4;
+                            }
                         }
                                 
                         i {
@@ -853,7 +847,6 @@ main {
                 .services-box-yellow {
                     background-color: #F9D783;
 
-                    
                     .box-arrow {
                         a {
                             background-color: #FFFFFF;
@@ -875,15 +868,15 @@ main {
                 align-items: center;
                 margin-top: 48px;
 
-                    a {
-                        text-decoration: none;
-                    }
+                a {
+                    text-decoration: none;
+                }
             }
         }
     }
 
     .choose-us {
-        padding: 16px;
+        padding: 40px;
         position: relative;
         z-index: 0;
 
@@ -1247,9 +1240,13 @@ main {
 
         .container {
             background-color: white;
-            padding: 120px 40px;
+            padding: 60px 40px;
             position: relative;
             z-index: 0;
+
+            @media (min-width: 576px) {
+                padding: 120px 40px;
+            }
 
             .testimonial-white-box {
                 background-color: white;
@@ -1280,7 +1277,6 @@ main {
                 column-gap: 80px;
                 row-gap: 110px;  
                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            
 
                 .testimonial-box {
                     width: min(350px, 90vw);
@@ -1696,7 +1692,7 @@ main {
 
     .lets-connect {
         background-color: #F0EFE9;
-        padding: 90px 0 102px 0;
+        padding: 85px 0 87px 0;
         align-items: center;
         position: relative;
     
@@ -1719,7 +1715,6 @@ main {
 
                         &:hover {
                             font-weight: 500;
-                            color: #9b9b9b;
                         }
                     }
 
@@ -1757,7 +1752,7 @@ main {
     }
 
     .contact-us {
-        padding: 120px 0 100px 0;
+        padding: 120px 0 85px 0;
 
         .container {    
 

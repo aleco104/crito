@@ -1,10 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,900&display=swap");
-* {
-  box-sizing: border-box;
-}
-
 html, body {
   font-family: "Inter", sans-serif;
   font-weight: 300;
@@ -44,7 +40,7 @@ p {
   color: #191919;
   font-size: 16px;
   font-weight: 600;
-  height: 56px;
+  height: 50px;
   padding-right: 35px;
   padding-left: 35px;
   display: flex;
@@ -67,7 +63,7 @@ p {
   color: #191919;
   font-size: 16px;
   font-weight: 600;
-  height: 56px;
+  height: 50px;
   padding-right: 35px;
   padding-left: 35px;
   display: flex;
@@ -91,7 +87,7 @@ p {
   color: #FFFFFF;
   font-size: 16px;
   font-weight: 600;
-  height: 56px;
+  height: 50px;
   padding-right: 35px;
   padding-left: 35px;
   border-radius: 40px;
@@ -110,7 +106,7 @@ p {
 
 header {
   background-color: #F0EFE9;
-  padding: 30px;
+  padding: 15px;
   align-items: center;
 }
 header .container {
@@ -174,6 +170,7 @@ header .container .content-top .socialmedia a:hover {
 }
 header .container .content-bottom {
   display: none;
+  padding-top: 21px;
 }
 @media (min-width: 768px) {
   header .container .content-bottom {
@@ -186,7 +183,7 @@ header .container .content-bottom .menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 40px;
+  margin-bottom: 12px;
 }
 header .container .content-bottom .menu a {
   color: #191919;
@@ -206,15 +203,14 @@ header .container .content-bottom .menu a.active::after, header .container .cont
   height: 2px;
   background-color: #191919;
   position: absolute;
-  left: 50%; /* Center horizontally */
-  bottom: -13px; /* 13px below the bottom of the link */
-  transform: translateX(-50%); /* Center horizontally */
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
 }
 header .container .content-bottom .login {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: -8px;
 }
 header .container .content-bottom .login a {
   text-decoration: none;
@@ -347,12 +343,17 @@ main .showcase .container img {
   }
 }
 main .customers {
-  margin-top: 98px;
-  margin-bottom: 0;
+  padding-top: 98px;
+  padding-bottom: 30px;
 }
 @media (min-width: 768px) {
   main .customers {
-    margin-bottom: 130px;
+    padding-bottom: 50px;
+  }
+}
+@media (min-width: 992px) {
+  main .customers {
+    padding-bottom: 130px;
   }
 }
 main .customers .container {
@@ -403,10 +404,8 @@ main .customers .container .customer4 {
 main .customers .container .customer5 {
   grid-area: c5;
 }
-@media (min-width: 576px) {
-  main .features {
-    margin-top: 500;
-  }
+main .features {
+  padding-top: 50px;
 }
 main .features .container {
   display: grid;
@@ -812,7 +811,7 @@ main .our-services .container .services-btn a {
   text-decoration: none;
 }
 main .choose-us {
-  padding: 16px;
+  padding: 40px;
   position: relative;
   z-index: 0;
 }
@@ -1149,9 +1148,14 @@ main .testimonial {
 }
 main .testimonial .container {
   background-color: white;
-  padding: 120px 40px;
+  padding: 60px 40px;
   position: relative;
   z-index: 0;
+}
+@media (min-width: 576px) {
+  main .testimonial .container {
+    padding: 120px 40px;
+  }
 }
 main .testimonial .container .testimonial-white-box {
   background-color: white;
@@ -1543,7 +1547,7 @@ footer .footer-part-two .container .footer-two-right .footer-socialmedia a:hover
 
 main .lets-connect {
   background-color: #F0EFE9;
-  padding: 90px 0 102px 0;
+  padding: 85px 0 87px 0;
   align-items: center;
   position: relative;
 }
@@ -1564,7 +1568,6 @@ main .lets-connect .container .header-titles .header-title-top a {
 }
 main .lets-connect .container .header-titles .header-title-top a:hover {
   font-weight: 500;
-  color: #9b9b9b;
 }
 main .lets-connect .container .header-titles .header-title-top p {
   color: #191919;
@@ -1592,7 +1595,7 @@ main .lets-connect .background-waves {
   }
 }
 main .contact-us {
-  padding: 120px 0 100px 0;
+  padding: 120px 0 85px 0;
 }
 main .contact-us .container .contact-us-boxes {
   display: grid;
