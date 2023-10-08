@@ -296,7 +296,7 @@ main .showcase .container .content .buttons {
   text-align: center;
   gap: 20px;
 }
-@media (min-width: 453px) {
+@media (min-width: 460px) {
   main .showcase .container .content .buttons {
     display: flex;
     flex-direction: row;
@@ -518,6 +518,12 @@ main .about-company .container {
   grid-template-columns: 1fr;
   grid-template-areas: "right" "left";
   gap: 20px;
+  padding-left: 30px;
+}
+@media (min-width: 576px) {
+  main .about-company .container {
+    padding-left: auto;
+  }
 }
 @media (min-width: 992px) {
   main .about-company .container {
@@ -781,6 +787,7 @@ main .our-services .container .services-bottom .services-box .box-arrow a {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.15s ease-in-out;
 }
 main .our-services .container .services-bottom .services-box .box-arrow a:hover {
   background-color: #A4A4A4;
@@ -1007,6 +1014,7 @@ main .project-and-case .container .project-box .box-btn a {
   text-decoration: none;
   color: #191919;
   margin-top: 32px;
+  transition: font-weight 0.1s ease-in-out;
 }
 main .project-and-case .container .project-box .box-btn a:hover {
   font-weight: 600;
@@ -1040,30 +1048,32 @@ main .meet-team {
 main .meet-team .container .meet-team-top {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin-bottom: 50px;
 }
-@media (min-width: 576px) {
+@media (min-width: 992px) {
   main .meet-team .container .meet-team-top {
-    display: flex;
+    margin-bottom: 90px;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
   }
 }
 main .meet-team .container .meet-team-top .meet-team-titles h6 {
-  margin-bottom: 36px;
-}
-main .meet-team .container .meet-team-top .meet-team-titles h2 {
-  margin-bottom: 30px;
-}
-@media (min-width: 576px) {
-  main .meet-team .container .meet-team-top .meet-team-titles h2 {
-    margin-bottom: 100px;
-  }
+  margin-bottom: 23px;
 }
 main .meet-team .container .meet-team-top .meet-team-btn {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 8px;
+  margin-top: 30px;
+}
+@media (min-width: 992px) {
+  main .meet-team .container .meet-team-top .meet-team-btn {
+    margin-top: auto;
+  }
 }
 main .meet-team .container .meet-team-top .meet-team-btn .btn-yellow {
   text-decoration: none;
@@ -1178,7 +1188,7 @@ main .testimonial .container .testimonial-titles {
   gap: 15px;
   justify-content: center;
   align-items: center;
-  padding-bottom: 80px;
+  padding-bottom: 76px;
 }
 main .testimonial .container .testimonial-boxes {
   display: grid;
@@ -1227,10 +1237,9 @@ main .testimonial .container .all-reviews-btn a {
 main .article {
   padding: 80px 40px 90px 40px;
 }
-@media (min-width: 576px) {
+@media (min-width: 992px) {
   main .article {
     padding-top: 120px;
-    padding-bottom: 90px;
   }
 }
 main .article .container {

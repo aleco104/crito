@@ -318,7 +318,7 @@ main {
                     text-align: center;
                     gap: 20px;
                     
-                    @media (min-width: 453px) {
+                    @media (min-width: 460px) {
                         display: flex;
                         flex-direction: row;
                     } 
@@ -554,6 +554,11 @@ main {
             grid-template-areas:    "right"
                                     "left";
             gap: 20px;
+            padding-left: 30px;
+
+            @media (min-width: 576px) {
+                padding-left: auto;
+            }
 
             @media (min-width: 992px) {
                 display: grid;
@@ -830,6 +835,7 @@ main {
                             display: flex;
                             justify-content: center;
                             align-items: center;
+                            transition: all 0.15s ease-in-out;
 
                             &:hover {
                                 background-color: #A4A4A4;
@@ -1082,11 +1088,11 @@ main {
                         font-weight: 500;    
                         text-decoration: none;
                         color: #191919;
-                        margin-top: 32px;                        
+                        margin-top: 32px;     
+                        transition: font-weight 0.1s ease-in-out;                   
 
                         &:hover {
                             font-weight: 600;
-                           
                         }
                     }
 
@@ -1126,33 +1132,34 @@ main {
             .meet-team-top {
                 display: flex;
                 flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                margin-bottom: 50px;
 
-                @media (min-width: 576px) {
-                    display: flex;
+                @media (min-width: 992px) {
+                    margin-bottom: 90px;
                     flex-direction: row;
                     justify-content: space-between;
-                    align-items: center;
+                    align-items: end;
                 }
 
                 .meet-team-titles {
 
                     h6 {
-                        margin-bottom: 36px;
-                    }
-
-                    h2 {
-                        margin-bottom: 30px;
-
-                        @media (min-width: 576px) {
-                            margin-bottom: 100px;
-                        }
+                        margin-bottom: 23px;
                     }
                 }
 
                 .meet-team-btn {
                     display: flex;
                     justify-content: center;
-                    align-items: center;                
+                    align-items: center;   
+                    margin-bottom: 8px;    
+                    margin-top: 30px; 
+                    
+                    @media (min-width: 992px) {
+                        margin-top: auto; 
+                    }
 
                     .btn-yellow {
                         text-decoration: none;
@@ -1269,7 +1276,7 @@ main {
                 gap: 15px;
                 justify-content: center;
                 align-items: center;
-                padding-bottom: 80px;
+                padding-bottom: 76px;
             }
 
             .testimonial-boxes {
@@ -1330,9 +1337,8 @@ main {
     .article {
         padding: 80px 40px 90px 40px;
 
-            @media (min-width: 576px) {
+            @media (min-width: 992px) {
                 padding-top: 120px;
-                padding-bottom: 90px;
             }
 
         .container {
